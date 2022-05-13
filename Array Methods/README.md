@@ -174,3 +174,119 @@ let len = ar.length;
 console.log("\nLast element: ", ar[len - 1]); 
 
 ```
+## Remove first element of the array
+
+To remove the first element of the array, you can use the dedicated `shift()` method. You can probably notice that `shift()` is the inverse of `unshift()` presented before.
+
+```
+let ar = [10, 20, 30];
+console.log("Initial array")
+console.log(ar);
+
+// Remove first element of an array
+ar.shift();
+console.log("\nArray after shift"); 
+console.log(ar);
+```
+
+## Remove last element of the array
+
+A very frequent scenario is to remove the last element of an array. JavaScript made this easy through the method `pop()`. You can probably notice that `pop()` is the inverse of `push()` presented before:
+
+```
+let ar = [10, 20, 30];
+console.log("Initial array")
+console.log(ar);
+
+// Remove the last element of an array
+ar.pop();
+console.log("\nArray after pop"); 
+console.log(ar);
+```
+
+## Remove an element at an arbitrary position
+
+To remove an element at an arbitrary position in an array, you can use the `splice()` method.
+
+You need to specify the element index as first parameter and put `1` as second parameter (since we are interested in removing just `1` element from the array):
+
+```
+var ar = [10, 20, 30];
+console.log("Initial array")
+console.log(ar);
+
+// Remove an element at an arbitrary position
+// ar.splice(index, 1);
+ar.splice(0, 1);
+console.log("\nArray after remove with splice"); 
+console.log(ar);
+
+```
+
+## Removing all elements of an array
+
+Removing all elements of an array is also a common task … but without a very intuitive solution in JavaScript.
+
+To remove all elements of an array, you can simply assign `0` to its length.
+
+CodeGuppy introduces an enhancement method named `clear()` that achieves the same task in a more intuitive way:
+
+```
+var ar = [10, 20, 30];
+
+// Remove all elements of an array
+
+use ar.lenght = 0;
+console.log(ar);
+
+```
+
+## Concatenate two arrays
+
+Sometime you need to concatenate / merge two arrays. You can simply do this using the `concat()` method. This method will return a new array containing all the elements from the first and second array:
+
+```
+// Merge / concatenate 2 arrays
+let ar1 = ["a", "b", "c"];
+let ar2 = ["d", "e", "f"];
+
+let ar = ar1.concat(ar2);
+console.log("\nArray after merging"); 
+console.log(ar);
+
+```
+
+## Extract a slice of an array
+
+`slice()` is an interesting method that can be used to extract a "slice" from an array. The "slice" will be returned as an independent array. The method receives as arguments the index of the first element (inclusive) and the index of the last element that we want in the slice (exclusive):
+
+```
+let ar = ["a", "b", "c", "d", "e", "f"];
+console.log("\nInitial array"); 
+console.log(ar);
+
+// Extracting a 'slice' from an array
+let arSlice = ar.slice(2, 4);
+console.log("\nArray obtained with slice"); 
+
+console.log(arSlice);
+
+```
+
+## Joining elements of an array
+
+You probably noticed by now that in JavaScript when you concatenate a piece of data (e.g. a number) with a string, all non-string parts are converted to string and then concatenated. You can concatenate an array with a string… and you'll end up with a string that you can further process.
+
+However, if you want to have more control on how the string is produced from an array, you can use the `join()` method. This method takes as argument the separator that will be placed between elements when they are concatenated together:
+
+```
+let ar = ["a", "b", "c", "d", "e", "f"];
+
+// Join all elements in a string
+let s = ar.join(";");
+
+console.log("\nString obtained by joining elements"); 
+
+console.log(s);
+
+```
