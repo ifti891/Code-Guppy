@@ -62,3 +62,33 @@ console.log(ar);
 console.log("\nLength of array: ", ar.length); 
 
 ```
+
+## Append an element at the end
+
+To append an element at the end of the array, you can use the `.push()` method
+
+```
+let ar = [10, 20, 30];
+console.log("Initial array")
+console.log(ar);
+
+// Append an element at the end of the array
+ar.push(100);
+console.log("\nArray after push"); 
+console.log(ar);
+```
+
+## Insert an element at the beginning
+
+To insert an element at the beginning of an array, you can use the `.unshift()` method. In the following example we are inserting number `0` as first element of the array.
+
+```
+var ar = [10, 20, 30];
+console.log("Initial array")
+console.log(ar);
+
+// Insert an element at the beginning of an array
+ar.unshift(0);
+console.log("\nArray after unshift"); 
+console.log(ar);
+```
